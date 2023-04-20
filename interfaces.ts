@@ -1,13 +1,14 @@
-const oldCivic = { name: 'civic', made: 2000, broken: true };
+// INTERFACES ARE NEW TYPES WE CREATE
+const oldCivic = {
+  name: 'civic',
+  year: 2000,
+  broken: true,
+};
 
-function printVehivcle(vehicle: {
-  name: string;
-  made: number;
-  broken: boolean;
-}): void {
+const printVehicle = (vehicle: { name: string; year: number; broken: boolean }): void => {
   console.log(`Name: ${vehicle.name}`);
-  console.log(`Year: ${vehicle.made}`);
-  console.log(`Broken? ${vehicle.broken}`);
-}
+  console.log(`Year: ${vehicle.year}`);
+  console.log(`Broken: ${vehicle.broken}`);
+};
 
-printVehivcle(oldCivic);
+printVehicle(oldCivic);
